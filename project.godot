@@ -1,0 +1,54 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "",
+"class": "EffekseerEffect",
+"language": "NativeScript",
+"path": "res://addons/effekseer/src/EffekseerEffect.gdns"
+}, {
+"base": "Spatial",
+"class": "EffekseerEmitter",
+"language": "NativeScript",
+"path": "res://addons/effekseer/src/EffekseerEmitter.gdns"
+}, {
+"base": "Node2D",
+"class": "EffekseerEmitter2D",
+"language": "NativeScript",
+"path": "res://addons/effekseer/src/EffekseerEmitter2D.gdns"
+}, {
+"base": "Resource",
+"class": "EffekseerResource",
+"language": "NativeScript",
+"path": "res://addons/effekseer/src/EffekseerResource.gdns"
+} ]
+_global_script_class_icons={
+"EffekseerEffect": "res://addons/effekseer/icon16.png",
+"EffekseerEmitter": "res://addons/effekseer/icon16.png",
+"EffekseerEmitter2D": "res://addons/effekseer/icon16.png",
+"EffekseerResource": "res://addons/effekseer/icon16.png"
+}
+
+[application]
+
+config/name="Sentience"
+config/icon="res://icon.png"
+
+[autoload]
+
+EffekseerSystem="*res://addons/effekseer/src/EffekseerSystem.gdns"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "effekseer" )
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
