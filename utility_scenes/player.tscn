@@ -363,8 +363,8 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=67]
-radius = 147.693
-height = 457.276
+radius = 55.4861
+height = 142.551
 
 [node name="Node2D" type="Node2D"]
 
@@ -373,9 +373,14 @@ mode = 2
 physics_material_override = SubResource( 68 )
 script = ExtResource( 6 )
 
+[node name="RayCast2D" type="RayCast2D" parent="Player"]
+enabled = true
+cast_to = Vector2( 0, 130 )
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
+scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 2 )
-animation = "gunidle"
+animation = "idle"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
