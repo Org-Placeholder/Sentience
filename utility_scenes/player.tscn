@@ -383,15 +383,17 @@ playing = true
 
 [node name="gun" type="Sprite" parent="Player/AnimatedSprite"]
 position = Vector2( -92.8181, -202.076 )
+rotation = 0.0994838
 scale = Vector2( 1.16667, 1.16667 )
 texture = ExtResource( 7 )
 offset = Vector2( 99.5584, 213.208 )
 script = ExtResource( 8 )
 
 [node name="pivot" type="Node2D" parent="Player/AnimatedSprite/gun"]
+position = Vector2( 1.35559, 2.08736 )
 
-[node name="pivot2" type="Node2D" parent="Player/AnimatedSprite/gun"]
-position = Vector2( 412.724, -38.5512 )
+[node name="aim" type="Node2D" parent="Player/AnimatedSprite/gun"]
+position = Vector2( 433.663, -50.6033 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource( 68 )
