@@ -22,7 +22,6 @@ func _process(delta):
 	pass
 	
 func _physics_process(delta):
-	
 	var p_state = IDLE
 	var p_gun = false
 	var p_dir = direction
@@ -37,6 +36,8 @@ func _physics_process(delta):
 	if(Input.is_action_pressed("ui_left")):
 		p_dir = LEFT
 		p_state = RUN
+	if(Input.is_action_pressed("ui_rmb")):
+		p_gun = true && onground
 	if(p_state == IDLE):
 		if(p_onground):
 			velocity.x = lerp(velocity.x, 0, 0.7)
@@ -50,11 +51,12 @@ func _physics_process(delta):
 	if(Input.is_action_pressed("ui_up") && p_onground):
 		velocity.y = -SPEED*1.2
 	move_and_slide(velocity, Vector2(0, -1))
-	if(p_state != state || p_onground != onground):
+	if(p_state != state || p_onground != onground || p_gun != gun_active):
 		match(p_state):
 			IDLE:
 				if($RayCast2D.is_colliding()):
 					if(p_gun):
+						$AnimatedSprite.play("gunidle")
 						pass
 					else:
 						$AnimatedSprite.play("idle")
@@ -65,6 +67,7 @@ func _physics_process(delta):
 			RUN:
 				if($RayCast2D.is_colliding()):
 					if(p_gun):
+						$AnimatedSprite.play("gunrun")
 						pass
 					else:
 						$AnimatedSprite.play("run")
@@ -75,9 +78,11 @@ func _physics_process(delta):
 			JUMP:
 				
 				pass
-		state = p_state
-		onground = p_onground
 	pass
+	$AnimatedSprite/gun.visible = p_gun
+	state = p_state
+	onground = p_onground
+	gun_active = p_gun
 	if(p_dir != direction):
 		$AnimatedSprite.scale.x = p_dir*abs($AnimatedSprite.scale.x)
 		direction = p_dir
