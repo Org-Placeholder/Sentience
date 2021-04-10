@@ -75,7 +75,6 @@ scale = Vector2( 0.25, 0.25 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -400, 213.546 )
-scale = Vector2( 1, 1 )
 
 [node name="TileMapContainer" type="Node2D" parent="."]
 scale = Vector2( 0.75, 0.75 )
