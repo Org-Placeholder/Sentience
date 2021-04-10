@@ -86,3 +86,11 @@ func _physics_process(delta):
 	if(p_dir != direction):
 		$AnimatedSprite.scale.x = p_dir*abs($AnimatedSprite.scale.x)
 		direction = p_dir
+
+func hit(val):
+	#handle hit
+	pass
+	
+func wasted(message):
+	#handle death and show message
+	pass

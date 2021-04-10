@@ -1,0 +1,14 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+path="res://.import/portal.efkefc-167760b43220d9f045fbee05ea154adb.res"
+
+[deps]
+
+source_file="res://effects/portal.efkefc"
+dest_files=[ "res://.import/portal.efkefc-167760b43220d9f045fbee05ea154adb.res" ]
+
+[params]
+
+scale=25.0

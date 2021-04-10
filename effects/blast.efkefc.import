@@ -1,0 +1,14 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+path="res://.import/blast.efkefc-5e760da9d8fe7db45387465e81d17f2e.res"
+
+[deps]
+
+source_file="res://effects/blast.efkefc"
+dest_files=[ "res://.import/blast.efkefc-5e760da9d8fe7db45387465e81d17f2e.res" ]
+
+[params]
+
+scale=1.0

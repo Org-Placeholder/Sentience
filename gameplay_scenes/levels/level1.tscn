@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://utility_scenes/player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/images/bgs/fg.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/bgs/gray.png" type="Texture" id=2]
 [ext_resource path="res://gameplay_scenes/Camera2D.gd" type="Script" id=3]
-[ext_resource path="res://assets/images/bgs/bg.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3032.4, 28.7838 )
@@ -13,26 +12,11 @@ extents = Vector2( 3032.4, 28.7838 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2( -363.267, -289.268 )
-scale = Vector2( 2, 2 )
-motion_scale = Vector2( 0.3, 0.3 )
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-texture = ExtResource( 4 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 0, 0, 1920, 620 )
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2( -242.178, -201.815 )
-scale = Vector2( 1.2, 1.2 )
 motion_scale = Vector2( 0.5, 0.5 )
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 0, 0, 1920, 620 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 250.316, 213.546 )

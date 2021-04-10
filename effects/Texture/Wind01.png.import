@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg.png-faa175a0c4272868d1f1cf58a0942ca9.stex"
+path="res://.import/Wind01.png-9ab22a06300a146fe11b0c9affff949f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/bgs/bg.png"
-dest_files=[ "res://.import/bg.png-faa175a0c4272868d1f1cf58a0942ca9.stex" ]
+source_file="res://effects/Texture/Wind01.png"
+dest_files=[ "res://.import/Wind01.png-9ab22a06300a146fe11b0c9affff949f.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
