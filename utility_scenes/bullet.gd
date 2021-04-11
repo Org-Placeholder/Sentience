@@ -23,7 +23,7 @@ func _on_Area2D_body_entered(body):
 		$Sprite.visible = false
 		$EffekseerEmitter2D.play()
 		if(body.has_method("on_hit")):
-			body.on_hit()
+			body.on_hit(0)
 		yield(get_tree().create_timer(2), "timeout")
 		queue_free()
 	pass

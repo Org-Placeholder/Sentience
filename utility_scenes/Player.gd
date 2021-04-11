@@ -11,7 +11,7 @@ const LEFT = -1
 const RIGHT = 1
 var gun_active = false
 var state = IDLE
-var direction = LEFT
+var direction = RIGHT
 var onground = false
 var velocity = Vector2()
 
@@ -49,7 +49,7 @@ func _physics_process(delta):
 		else:
 			velocity.x = lerp(velocity.x, SPEED*p_dir/2, 0.7)
 	if(Input.is_action_pressed("ui_up") && p_onground):
-		velocity.y = -SPEED*1.2
+		velocity.y = -SPEED*1.5
 	move_and_slide(velocity, Vector2(0, -1))
 	if(p_state != state || p_onground != onground || p_gun != gun_active):
 		match(p_state):

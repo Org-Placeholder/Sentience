@@ -12,6 +12,8 @@ extents = Vector2( 46.125, 4.125 )
 extents = Vector2( 47.7031, 5.83297 )
 
 [node name="bullet" type="KinematicBody2D"]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
