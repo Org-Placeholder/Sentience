@@ -18,5 +18,5 @@ func _process(delta):
 
 func _on_Area2D_body_entered(body):
 	if(body.has_method("on_wasted")):
-			body.on_wasted("lmao ded")
+			body.on_wasted("Ded by a blade")
 	pass # Replace with function body.

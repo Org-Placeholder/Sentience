@@ -6,13 +6,24 @@
 z_index = 10
 script = ExtResource( 1 )
 
-[node name="Button" type="Button" parent="."]
-margin_left = -102.148
-margin_top = -22.6375
-margin_right = 109.852
-margin_bottom = 24.3625
+[node name="Resume" type="Button" parent="."]
+margin_left = -103.148
+margin_top = -63.6375
+margin_right = 108.852
+margin_bottom = -16.6375
 text = "RESUME"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+
+[node name="Exit" type="Button" parent="."]
+margin_left = -103.148
+margin_top = 18.3625
+margin_right = 108.852
+margin_bottom = 65.3625
+text = "EXIT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

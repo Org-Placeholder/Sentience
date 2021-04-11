@@ -14,7 +14,7 @@ var state = IDLE
 var direction = RIGHT
 var onground = false
 var velocity = Vector2()
-
+var failure_screen = preload("res://ui_scenes/failure_scene.tscn")
 func _physics_process(delta):
 	if(GameState.game_playing):
 		var p_state = IDLE
@@ -87,6 +87,9 @@ func on_hit(val):
 	pass
 	
 func on_wasted(message):
-	print(message)
+	GameState.game_playing = false
+	var f_screen = failure_screen.instance()
+	get_parent().get_parent().get_node("Camera2D").add_child(f_screen)
+	f_screen.get_node("Label").text = message
 	#handle death and show message
 	pass

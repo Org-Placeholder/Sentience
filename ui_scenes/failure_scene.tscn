@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ui_scenes/failure_scene.gd" type="Script" id=1]
+
+[node name="failure" type="Node2D"]
+z_index = 10
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -113.0
+margin_top = -76.0
+margin_right = 111.0
+margin_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Retry" type="Button" parent="."]
+margin_left = -111.0
+margin_top = 21.0
+margin_right = 112.0
+margin_bottom = 66.0
+text = "RETRY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Retry" to="." method="_on_Retry_pressed"]

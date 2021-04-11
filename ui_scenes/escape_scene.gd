@@ -14,7 +14,11 @@ func _process(delta):
 	if(GameState.game_playing):
 		queue_free()
 
-
-func _on_Button_pressed():
+func _on_Resume_pressed():
 	GameState.game_playing = true
+	pass # Replace with function body.
+
+
+func _on_Exit_pressed():
+	get_tree().quit()
 	pass # Replace with function body.
