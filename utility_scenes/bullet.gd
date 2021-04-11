@@ -11,7 +11,7 @@ func shoot(p_direction):
 	pass
 
 func _physics_process(delta):
-	if(shot):
+	if(shot && GameState.game_playing):
 		move_and_slide(direction*SPEED, Vector2(0, -1))
 		elapsed_time += delta
 		if(elapsed_time > 2):
