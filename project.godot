@@ -39,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Sentience"
-run/main_scene="res://gameplay_scenes/levels/level1.tscn"
+run/main_scene="res://ui_scenes/title_screen.tscn"
 config/icon="res://assets/images/icon.png"
 
 [autoload]

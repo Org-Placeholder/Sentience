@@ -14,3 +14,14 @@ autoplay = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Play" type="Button" parent="."]
+margin_left = 183.138
+margin_top = 209.301
+margin_right = 423.138
+margin_bottom = 260.301
+text = "PLAY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
