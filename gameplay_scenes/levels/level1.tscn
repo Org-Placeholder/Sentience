@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://utility_scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/images/bgs/gray.png" type="Texture" id=2]
 [ext_resource path="res://gameplay_scenes/Camera2D.gd" type="Script" id=3]
 [ext_resource path="res://addons/effekseer/src/EffekseerEmitter2D.gdns" type="Script" id=4]
+[ext_resource path="res://assets/scifitilemap.tres" type="TileSet" id=5]
 [ext_resource path="res://gameplay_scenes/blade.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/tilemap.tres" type="TileSet" id=7]
 
@@ -74,6 +75,12 @@ scale = Vector2( 0.25, 0.25 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -400, 213.546 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+scale = Vector2( 0.75, 0.75 )
+tile_set = ExtResource( 5 )
+format = 1
+tile_data = PoolIntArray( 458735, 0, 0 )
 
 [node name="TileMapContainer" type="Node2D" parent="."]
 scale = Vector2( 0.75, 0.75 )

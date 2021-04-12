@@ -8,4 +8,4 @@ Credits :
 - Majority of vfx from Effekseer samples : [link](https://effekseer.github.io/), [samples](https://effekseer.github.io/en/contribute.html) 
 - Background for city : [link](https://ansimuz.itch.io/cyberpunk-street-environment)
 - Tilesets from [here](https://egordorichev.itch.io/adve).
-- 
+- Sci-fi tilesets from [here](https://pzuh.itch.io/free-sci-fi-platformer-tileset)
