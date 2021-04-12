@@ -17,8 +17,9 @@ func _process(delta):
 func _input(event):
 	if(event.as_text() == "Escape"):
 		if(Input.is_action_just_pressed("ui_cancel")):
-			GameState.game_playing = !GameState.game_playing
-			if(!GameState.game_playing):
-				add_child(escape_screen.instance())
+			if(GameState.alive):
+				GameState.game_playing = !GameState.game_playing
+				if(!GameState.game_playing):
+					add_child(escape_screen.instance())
 			get_tree().set_input_as_handled()
 

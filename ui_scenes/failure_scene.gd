@@ -20,5 +20,6 @@ func _on_Retry_pressed():
 	#the lower if statement should be changed to if else tree to support multiple level
 	if(true):
 		GameState.game_playing = true
+		GameState.alive = true
 		get_tree().change_scene("res://gameplay_scenes/levels/level1.tscn")
 	pass # Replace with function body.

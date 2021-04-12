@@ -88,6 +88,7 @@ func on_hit(val):
 	
 func on_wasted(message):
 	GameState.game_playing = false
+	GameState.alive = false
 	var f_screen = failure_screen.instance()
 	get_parent().get_parent().get_node("Camera2D").add_child(f_screen)
 	f_screen.get_node("Label").text = message
