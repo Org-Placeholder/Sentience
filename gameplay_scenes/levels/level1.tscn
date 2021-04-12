@@ -80,7 +80,6 @@ position = Vector2( -400, 213.546 )
 scale = Vector2( 0.75, 0.75 )
 tile_set = ExtResource( 5 )
 format = 1
-tile_data = PoolIntArray( 458735, 0, 0 )
 
 [node name="TileMapContainer" type="Node2D" parent="."]
 scale = Vector2( 0.75, 0.75 )
