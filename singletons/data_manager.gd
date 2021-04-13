@@ -6,7 +6,6 @@ func _ready():
 	load_game()
 
 func load_game():
-	print("reached")
 	var save_game = File.new()
 	if not save_game.file_exists("user://savegame.save"):
 		game_data["level"] = 0
@@ -14,7 +13,7 @@ func load_game():
 		pass 
 	else:
 		save_game.open("user://savegame.save", File.READ)
-		var game_data = parse_json(save_game.get_line())
+		game_data = parse_json(save_game.get_line())
 		save_game.close()
 	pass
 
