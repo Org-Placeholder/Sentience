@@ -7,7 +7,9 @@ extends Node2D
 
 var x_max_offset
 var og_position
-# Called when the node enters the scene tree for the first time.
+var max_level = 5
+var distance_between_buttons = 20
+
 func _ready():
 	x_max_offset = $Position2D2.position.x - $Position2D.position.x
 	og_position = $Node2D.position.x
