@@ -6,6 +6,7 @@ export var down_rot_angle = -18
 export var bullet: PackedScene
 export var detectionResetTime := 3
 export var timeBetweenShots = 0.4
+export var recoil_comeback_weight = 0.5
 var rotate_vel
 onready var head = $Head
 onready var ray = $Head/RayCast2D
@@ -15,10 +16,11 @@ onready var baseSprite1 = $Base
 onready var baseSprite2 = $Base2
 var time = 0
 var timeSinceLastShot = 0;
+var start_position
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rotate_vel = rotate_speed # Replace with function body.
-
+	start_position = $Head.position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -30,6 +32,7 @@ func _process(delta):
 	time += delta
 	if time >= detectionResetTime:
 		changeDetection(false)
+	$Head.position = lerp($Head.position, start_position, recoil_comeback_weight)
 	
 func changeDetection(detected)->void:
 	if(detected):
@@ -50,6 +53,7 @@ func shoot()->void:
 	temp.rotation_degrees = head.rotation_degrees
 	temp.shoot(ray.get_collision_point()-position)
 	timeSinceLastShot = 0;
+	$Head.translate(Vector2(50, 0).rotated(rotation))
 	
 func checkCollision()->void:
 	if ray.is_colliding():
