@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/images/mount_gun.png" type="Texture" id=1]
+[ext_resource path="res://gameplay_scenes/Turret.gd" type="Script" id=2]
+[ext_resource path="res://assets/images/mount.png" type="Texture" id=3]
+[ext_resource path="res://utility_scenes/bullet.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/images/mount_gun_detect.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/mount_detect.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 124.501, 112.492 )
+
+[node name="Turret" type="StaticBody2D"]
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 2 )
+bullet = ExtResource( 4 )
+
+[node name="Head" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Head"]
+position = Vector2( -44.6293, -33.6035 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="Head"]
+visible = false
+position = Vector2( -44.629, -33.604 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 5 )
+
+[node name="RayCast2D" type="RayCast2D" parent="Head"]
+position = Vector2( -196.161, -26.8641 )
+enabled = true
+cast_to = Vector2( -1000, 0 )
+collide_with_areas = true
+
+[node name="Base" type="Sprite" parent="."]
+position = Vector2( 3.14982, 76.9015 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 3 )
+
+[node name="Base2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 3.15, 76.901 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -39.4904, 39.3635 )
+shape = SubResource( 1 )

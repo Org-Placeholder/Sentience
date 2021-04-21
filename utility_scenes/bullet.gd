@@ -18,7 +18,7 @@ func _physics_process(delta):
 			queue_free()
 
 func _on_Area2D_body_entered(body):
-	if(!body.get("bullet")):
+	if(!body.get("bullet") && shot):
 		shot = false
 		$Sprite.visible = false
 		$EffekseerEmitter2D.play()

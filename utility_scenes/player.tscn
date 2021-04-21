@@ -368,7 +368,9 @@ height = 142.551
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Player" type="KinematicBody2D" parent="."]
+[node name="Player" type="KinematicBody2D" parent="." groups=[
+"Player",
+]]
 script = ExtResource( 6 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Player"]
