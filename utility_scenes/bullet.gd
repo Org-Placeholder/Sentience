@@ -20,7 +20,6 @@ func _physics_process(delta):
 			queue_free()
 
 func _on_Area2D_body_entered(body):
-	print(body.get("bullet"))
 	if((!body.get("bullet") || body.obstacle ) && shot):
 		shot = false
 		$Sprite.visible = false

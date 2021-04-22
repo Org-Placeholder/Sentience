@@ -71,5 +71,6 @@ func checkCollision()->void:
 		
 func on_hit(val):
 	health -= val
+	$hitpoint_launcher.launch(val)
 	if(health < 0) :
 		queue_free()

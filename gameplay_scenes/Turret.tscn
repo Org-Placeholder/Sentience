@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/images/mount_gun.png" type="Texture" id=1]
 [ext_resource path="res://gameplay_scenes/Turret.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://utility_scenes/bullet.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/images/mount_gun_detect.png" type="Texture" id=5]
 [ext_resource path="res://assets/images/mount_detect.png" type="Texture" id=6]
+[ext_resource path="res://utility_scenes/hit_point_launcher.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 124.501, 112.492 )
@@ -48,3 +49,6 @@ collide_with_areas = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -39.4904, 39.3635 )
 shape = SubResource( 1 )
+
+[node name="hitpoint_launcher" parent="." instance=ExtResource( 7 )]
+position = Vector2( -32.6663, -13.3635 )
