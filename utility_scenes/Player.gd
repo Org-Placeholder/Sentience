@@ -83,7 +83,7 @@ func _physics_process(delta):
 			direction = p_dir
 
 func on_hit(val):
-	#handle hit
+	$AnimatedSprite/hitpoint_launcher.launch(val)
 	pass
 	
 func on_wasted(message):
