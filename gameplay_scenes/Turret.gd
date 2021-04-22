@@ -7,6 +7,8 @@ export var bullet: PackedScene
 export var detectionResetTime := 3
 export var timeBetweenShots = 0.4
 export var recoil_comeback_weight = 0.5
+export var hitpoints = 50
+export var bullet_strength = 10
 var rotate_vel
 onready var head = $Head
 onready var ray = $Head/RayCast2D
@@ -14,9 +16,11 @@ onready var headSprite1 = $Head/Sprite
 onready var headSprite2 = $Head/Sprite2
 onready var baseSprite1 = $Base
 onready var baseSprite2 = $Base2
+var obstacle = true
 var time = 0
 var timeSinceLastShot = 0;
 var start_position
+var health = hitpoints
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rotate_vel = rotate_speed # Replace with function body.
@@ -51,7 +55,7 @@ func shoot()->void:
 	add_child(temp)
 	temp.global_position = ray.global_position + Vector2(-10,0)
 	temp.rotation_degrees = head.rotation_degrees
-	temp.shoot(ray.get_collision_point()-position)
+	temp.shoot(ray.get_collision_point()-position, bullet_strength)
 	timeSinceLastShot = 0;
 	$Head.translate(Vector2(50, 0).rotated(rotation))
 	
@@ -65,3 +69,7 @@ func checkCollision()->void:
 				timeSinceLastShot = 0
 				shoot()
 		
+func on_hit(val):
+	health -= val
+	if(health < 0) :
+		queue_free()

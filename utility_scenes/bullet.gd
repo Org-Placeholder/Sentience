@@ -5,9 +5,11 @@ var shot = false
 const SPEED = 30
 var elapsed_time = 0
 var bullet = true
-func shoot(p_direction):
+var hitpoints = 0
+func shoot(p_direction, val):
 	direction = p_direction
 	shot = true
+	hitpoints = val
 	pass
 
 func _physics_process(delta):
@@ -18,12 +20,13 @@ func _physics_process(delta):
 			queue_free()
 
 func _on_Area2D_body_entered(body):
-	if(!body.get("bullet") && shot):
+	print(body.get("bullet"))
+	if((!body.get("bullet") || body.obstacle ) && shot):
 		shot = false
 		$Sprite.visible = false
 		$EffekseerEmitter2D.play()
 		if(body.has_method("on_hit")):
-			body.on_hit(0)
+			body.on_hit(hitpoints)
 		yield(get_tree().create_timer(2), "timeout")
 		queue_free()
 	pass
