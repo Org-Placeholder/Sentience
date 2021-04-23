@@ -56,7 +56,7 @@ shape = SubResource( 1 )
 position = Vector2( -32.6663, -13.3635 )
 
 [node name="EffekseerEmitter2D" type="Node2D" parent="."]
-position = Vector2( 1.48483, 118.787 )
+position = Vector2( -2.86102e-06, 135.12 )
 script = ExtResource( 8 )
 effect = ExtResource( 9 )
 autoplay = false

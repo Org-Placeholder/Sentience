@@ -13,7 +13,7 @@ func _ready():
 func _process(delta):
 	if(GameState.game_playing):
 		position = get_parent().get_node("Player/Player").position - offset_cam
-		
+		$damage.modulate.a = GameState.get_damage_visiblity()
 func _input(event):
 	if(event.as_text() == "Escape"):
 		if(Input.is_action_just_pressed("ui_cancel")):

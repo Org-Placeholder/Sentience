@@ -84,6 +84,7 @@ func _physics_process(delta):
 
 func on_hit(val):
 	$AnimatedSprite/hitpoint_launcher.launch(val)
+	GameState.hit()
 	pass
 	
 func on_wasted(message):
