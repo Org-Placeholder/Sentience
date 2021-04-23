@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/images/mount_gun.png" type="Texture" id=1]
 [ext_resource path="res://gameplay_scenes/Turret.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://assets/images/mount_gun_detect.png" type="Texture" id=5]
 [ext_resource path="res://assets/images/mount_detect.png" type="Texture" id=6]
 [ext_resource path="res://utility_scenes/hit_point_launcher.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/effekseer/src/EffekseerEmitter2D.gdns" type="Script" id=8]
+[ext_resource path="res://effects/blast.efkefc" type="Resource" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 124.501, 112.492 )
@@ -52,3 +54,9 @@ shape = SubResource( 1 )
 
 [node name="hitpoint_launcher" parent="." instance=ExtResource( 7 )]
 position = Vector2( -32.6663, -13.3635 )
+
+[node name="EffekseerEmitter2D" type="Node2D" parent="."]
+position = Vector2( 1.48483, 118.787 )
+script = ExtResource( 8 )
+effect = ExtResource( 9 )
+autoplay = false

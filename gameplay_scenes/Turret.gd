@@ -21,6 +21,7 @@ var time = 0
 var timeSinceLastShot = 0;
 var start_position
 var health = hitpoints
+var destroyed = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rotate_vel = rotate_speed # Replace with function body.
@@ -28,15 +29,16 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	head.rotation_degrees += rotate_vel * delta
-	if(head.rotation_degrees >= up_rot_angle || head.rotation_degrees <= down_rot_angle):
-		rotate_vel *= -1
-	checkCollision()
-	timeSinceLastShot += delta
-	time += delta
-	if time >= detectionResetTime:
-		changeDetection(false)
-	$Head.position = lerp($Head.position, start_position, recoil_comeback_weight)
+	if(!destroyed):
+		head.rotation_degrees += rotate_vel * delta
+		if(head.rotation_degrees >= up_rot_angle || head.rotation_degrees <= down_rot_angle):
+			rotate_vel *= -1
+		checkCollision()
+		timeSinceLastShot += delta
+		time += delta
+		if time >= detectionResetTime:
+			changeDetection(false)
+		$Head.position = lerp($Head.position, start_position, recoil_comeback_weight)
 	
 func changeDetection(detected)->void:
 	if(detected):
@@ -70,7 +72,14 @@ func checkCollision()->void:
 				shoot()
 		
 func on_hit(val):
-	health -= val
-	$hitpoint_launcher.launch(val)
-	if(health < 0) :
-		queue_free()
+	if(!destroyed):
+		health -= val
+		$hitpoint_launcher.launch(val)
+		if(health < 0) :
+			destroyed = true
+			$Base.visible = false
+			$Base2.visible = false
+			$Head.visible = false
+			$EffekseerEmitter2D.play() 
+			yield(get_tree().create_timer(2), "timeout")
+			queue_free()
