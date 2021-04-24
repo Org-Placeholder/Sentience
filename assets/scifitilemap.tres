@@ -123,25 +123,25 @@ points = PoolVector2Array( 256, 256, 0, 256, 0, 0, 256, 0 )
 polygon = PoolVector2Array( 256, 256, 0, 256, 0, 0, 256, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=32]
-points = PoolVector2Array( 256, 256, 0, 256, 0, 0, 256, 0 )
+points = PoolVector2Array( 256, 127, 0, 127, 0, 0, 256, 0 )
 
 [sub_resource type="OccluderPolygon2D" id=33]
 polygon = PoolVector2Array( 256, 256, 0, 256, 0, 0, 256, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=34]
-points = PoolVector2Array( 256, 256, 0, 256, 0, 0, 256, 0 )
+points = PoolVector2Array( 256, 129, 0, 130, 0, 0, 256, 0 )
 
 [sub_resource type="OccluderPolygon2D" id=35]
 polygon = PoolVector2Array( 256, 256, 0, 256, 0, 0, 256, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=36]
-points = PoolVector2Array( 256, 256, 0, 256, 0, 0, 256, 0 )
+points = PoolVector2Array( 256, 128, 0, 126, 0, 0, 256, 0 )
 
 [sub_resource type="OccluderPolygon2D" id=37]
 polygon = PoolVector2Array( 256, 256, 0, 256, 0, 1, 256, 1 )
 
 [sub_resource type="ConvexPolygonShape2D" id=38]
-points = PoolVector2Array( 256, 256, 0, 256, 0, 0, 256, 0 )
+points = PoolVector2Array( 256, 131, 0, 130, 0, 0, 256, 0 )
 
 [sub_resource type="OccluderPolygon2D" id=39]
 polygon = PoolVector2Array( 256, 256, 0, 256, 0, 0, 256, 0 )
