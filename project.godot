@@ -45,7 +45,8 @@ config/icon="res://assets/images/icon.png"
 [autoload]
 
 EffekseerSystem="*res://addons/effekseer/src/EffekseerSystem.gdns"
-GameState="*res://gameplay_scenes/game_state.gd"
+GameState="*res://singletons/game_state.gd"
+DataManager="*res://singletons/data_manager.gd"
 
 [display]
 
