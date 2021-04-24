@@ -16,6 +16,6 @@ func _process(delta):
 				bullet_inst.scale = global_scale
 				get_tree().root.add_child(bullet_inst)
 				var dir = $aim.global_position - $pivot.global_position
-				bullet_inst.shoot(dir)
+				bullet_inst.shoot(dir, 10)
 			pass
 
