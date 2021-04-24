@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://utility_scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/images/bgs/gray.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/tilemap.tres" type="TileSet" id=7]
 [ext_resource path="res://gameplay_scenes/Turret.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/images/damage.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/light.png" type="Texture" id=10]
 
 [node name="Node2D" type="Node2D"]
 
@@ -30,9 +31,14 @@ script = ExtResource( 3 )
 
 [node name="damage" type="Sprite" parent="Camera2D"]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( -1.34621, 1.6322 )
-scale = Vector2( 0.129845, 0.134269 )
+position = Vector2( 1.67, 1.632 )
+scale = Vector2( 0.13, 0.14 )
 texture = ExtResource( 9 )
+
+[node name="Light2D" type="Light2D" parent="Camera2D"]
+position = Vector2( -11.0519, 86.2549 )
+texture = ExtResource( 10 )
+shadow_color = Color( 0.607843, 0.498039, 0.498039, 1 )
 
 [node name="EffekseerEmitter2D" type="Node2D" parent="."]
 position = Vector2( 100, 400 )
