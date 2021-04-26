@@ -10,3 +10,5 @@ Credits :
 - Tilesets from [here](https://egordorichev.itch.io/adve).
 - Sci-fi tilesets from [here](https://pzuh.itch.io/free-sci-fi-platformer-tileset)
 - Montserrat font from [here](https://www.1001freefonts.com/montserrat.font)
+- Laser beam code and assets from [here](https://github.com/GDQuest/godot-2d-space-game) and assets for the same licensed under [CC 4.0](https://creativecommons.org/licenses/by/4.0/) by GDQuest and contributors (https://www.gdquest.com/)
+- Turret inspired by a similar 2d asset by [f0x0ne](https://f0x0ne.itch.io/2d-sci-fi-turret-pack). 
