@@ -1,14 +1,21 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://utility_scenes/DialogSystem/RichTextLabel.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/dynamicfont.tres" type="DynamicFont" id=2]
 
 [sub_resource type="Theme" id=1]
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://assets/fonts/Montserrat-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = SubResource( 2 )
 
 [node name="Polygon2D" type="Polygon2D"]
 position = Vector2( 0, 36 )
 scale = Vector2( 1, 0.9375 )
-z_index = 4096
-color = Color( 0.192157, 0.184314, 0.184314, 1 )
+color = Color( 0, 0, 0, 0.482353 )
 polygon = PoolVector2Array( 32, 448, 32, 448.673, 32, 576, 992, 576, 992, 448 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -16,6 +23,11 @@ margin_left = 56.0
 margin_top = 472.0
 margin_right = 968.0
 margin_bottom = 552.0
+custom_fonts/mono_font = ExtResource( 2 )
+custom_fonts/bold_italics_font = ExtResource( 2 )
+custom_fonts/italics_font = ExtResource( 2 )
+custom_fonts/bold_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
 script = ExtResource( 1 )
 __meta__ = {
@@ -28,6 +40,7 @@ margin_top = 40.0
 margin_right = 912.0
 margin_bottom = 80.0
 theme = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Skip "
 __meta__ = {
 "_edit_use_anchors_": false
