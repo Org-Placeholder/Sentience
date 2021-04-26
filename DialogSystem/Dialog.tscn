@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://DialogSystem/RichTextLabel.gd" type="Script" id=1]
+
+[sub_resource type="Theme" id=1]
+
+[node name="Polygon2D" type="Polygon2D"]
+position = Vector2( 0, 36 )
+scale = Vector2( 1, 0.9375 )
+color = Color( 0.192157, 0.184314, 0.184314, 1 )
+polygon = PoolVector2Array( 32, 448, 32, 448.673, 32, 576, 992, 576, 992, 448 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 56.0
+margin_top = 472.0
+margin_right = 968.0
+margin_bottom = 552.0
+bbcode_enabled = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="RichTextLabel"]
+margin_left = 776.0
+margin_top = 40.0
+margin_right = 912.0
+margin_bottom = 80.0
+theme = SubResource( 1 )
+text = "Skip "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+[connection signal="pressed" from="RichTextLabel/Button" to="RichTextLabel" method="_on_Button_pressed"]
+[connection signal="timeout" from="Timer" to="RichTextLabel" method="_on_Timer_timeout"]
