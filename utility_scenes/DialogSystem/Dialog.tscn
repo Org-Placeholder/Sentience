@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://DialogSystem/RichTextLabel.gd" type="Script" id=1]
+[ext_resource path="res://utility_scenes/DialogSystem/RichTextLabel.gd" type="Script" id=1]
 
 [sub_resource type="Theme" id=1]
 
 [node name="Polygon2D" type="Polygon2D"]
 position = Vector2( 0, 36 )
 scale = Vector2( 1, 0.9375 )
+z_index = 4096
 color = Color( 0.192157, 0.184314, 0.184314, 1 )
 polygon = PoolVector2Array( 32, 448, 32, 448.673, 32, 576, 992, 576, 992, 448 )
 
