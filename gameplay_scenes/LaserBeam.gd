@@ -15,10 +15,13 @@ onready var beam_particles := $BeamParticles2D
 onready var fill := $FillLine2D
 onready var tween := $Tween
 onready var line_width: float = fill.width
+onready var bulb := $BulbBody/Bulb
+onready var bulbCollision := $BulbBody/CollisionShape2D
 
 var rotate_vel
 var is_casting := false setget set_is_casting
 var time
+var destroyed
 
 func _ready() -> void:
 	fill.visible = true
@@ -26,7 +29,7 @@ func _ready() -> void:
 	fill.points[1] = Vector2.ZERO
 	time = 0
 	rotate_vel = rotate_speed
-
+	destroyed = false
 
 func _physics_process(delta: float) -> void:
 	cast_to = (cast_to + Vector2.RIGHT * cast_speed * delta).clamped(max_length)
@@ -34,18 +37,19 @@ func _physics_process(delta: float) -> void:
 
 func _process(delta):
 	
-	time += delta
-	if(time <= on_time):
-		set_is_casting(true)
-	else:
-		set_is_casting(false)
-	if(time >= time_period):
-		time = 0
-	rotation_degrees += rotate_vel * delta
-	if(rotation_degrees >= up_rot_angle): 
-		rotate_vel = -rotate_speed
-	if(rotation_degrees <= down_rot_angle):
-		rotate_vel = rotate_speed
+	if(!destroyed):
+		time += delta
+		if(time <= on_time):
+			set_is_casting(true)
+		else:
+			set_is_casting(false)
+		if(time >= time_period):
+			time = 0
+		rotation_degrees += rotate_vel * delta
+		if(rotation_degrees >= up_rot_angle): 
+			rotate_vel = -rotate_speed
+		if(rotation_degrees <= down_rot_angle):
+			rotate_vel = rotate_speed
 	
 
 func set_is_casting(cast: bool) -> void:
@@ -102,3 +106,8 @@ func disappear() -> void:
 	tween.interpolate_property(fill, "width", fill.width, 0, growth_time)
 	tween.start()
 	
+func on_hit(val):
+	if(!destroyed):
+		bulb.visible = false
+		set_is_casting(false)
+		destroyed = true
