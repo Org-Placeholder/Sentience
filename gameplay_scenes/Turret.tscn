@@ -15,6 +15,8 @@ extents = Vector2( 124.501, 112.492 )
 
 [node name="Turret" type="StaticBody2D"]
 scale = Vector2( 0.3, 0.3 )
+collision_layer = 2
+collision_mask = 2
 script = ExtResource( 2 )
 bullet = ExtResource( 4 )
 

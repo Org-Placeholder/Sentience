@@ -9,7 +9,7 @@
 [ext_resource path="res://assets/tilemap.tres" type="TileSet" id=7]
 [ext_resource path="res://gameplay_scenes/Turret.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/images/damage.png" type="Texture" id=9]
-[ext_resource path="res://assets/images/light.png" type="Texture" id=10]
+[ext_resource path="res://gameplay_scenes/LaserBeam.tscn" type="PackedScene" id=11]
 
 [node name="Node2D" type="Node2D"]
 
@@ -34,11 +34,6 @@ modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1.67, 1.632 )
 scale = Vector2( 0.13, 0.14 )
 texture = ExtResource( 9 )
-
-[node name="Light2D" type="Light2D" parent="Camera2D"]
-position = Vector2( -11.0519, 86.2549 )
-texture = ExtResource( 10 )
-shadow_color = Color( 0.607843, 0.498039, 0.498039, 1 )
 
 [node name="EffekseerEmitter2D" type="Node2D" parent="."]
 position = Vector2( 100, 400 )
@@ -71,3 +66,8 @@ format = 1
 position = Vector2( -97.0193, 108.826 )
 scale = Vector2( 0.5, 0.5 )
 timeBetweenShots = 0.094
+
+[node name="LaserBeam2D" parent="." instance=ExtResource( 11 )]
+position = Vector2( 290.168, 100.981 )
+rotation = 1.5708
+time_period = 5
