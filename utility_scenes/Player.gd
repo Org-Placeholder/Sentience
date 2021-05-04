@@ -5,16 +5,21 @@ enum{
 	RUN,
 	JUMP,
 }
-const G = 400
-const SPEED = 400
+const G = 2000
+const SPEED = 800
+const JUMP_SPEED = 1000
 const LEFT = -1
 const RIGHT = 1
+const JUMP_REMEMBER_TIME = 0.2
+const ONGROUND_REMEMBER_TIME = 0.2 
 var gun_active = false
 var state = IDLE
 var direction = RIGHT
 var onground = false
 var velocity = Vector2()
 var failure_screen = preload("res://ui_scenes/failure_scene.tscn")
+var jump_remember_time_left = -1
+var ground_remember_time_left = -1 
 func _physics_process(delta):
 	if(GameState.game_playing):
 		var p_state = IDLE
@@ -43,8 +48,20 @@ func _physics_process(delta):
 				velocity.x = lerp(velocity.x, SPEED*p_dir, 0.7)
 			else:
 				velocity.x = lerp(velocity.x, SPEED*p_dir/2, 0.7)
-		if(Input.is_action_just_pressed("ui_up") && p_onground):
-			velocity.y = -SPEED*1.5
+		jump_remember_time_left -= delta 
+		ground_remember_time_left -= delta 
+		if(Input.is_action_just_pressed("ui_up")):
+			jump_remember_time_left = JUMP_REMEMBER_TIME
+		if(p_onground): 
+			ground_remember_time_left = ONGROUND_REMEMBER_TIME 
+		if(jump_remember_time_left > 0 && ground_remember_time_left > 0):
+			jump_remember_time_left = 0
+			ground_remember_time_left = 0
+			velocity.y = -JUMP_SPEED
+		if(Input.is_action_just_released("ui_up")):
+			if(velocity.y < 0): 
+				velocity.y /= 2 
+			
 		move_and_slide(velocity, Vector2(0, -1))
 		if(p_state != state || p_onground != onground || p_gun != gun_active):
 			match(p_state):
