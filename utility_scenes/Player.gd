@@ -20,6 +20,7 @@ var velocity = Vector2()
 var failure_screen = preload("res://ui_scenes/failure_scene.tscn")
 var jump_remember_time_left = -1
 var ground_remember_time_left = -1 
+var double_jump=false;
 func _physics_process(delta):
 	if(GameState.game_playing):
 		var p_state = IDLE
@@ -28,6 +29,7 @@ func _physics_process(delta):
 		var p_onground = $RayCast2D.is_colliding()
 		if(p_onground):
 			velocity.y = 0
+			double_jump=false;
 		else:
 			velocity.y += G*delta
 		if(Input.is_action_pressed("ui_right")):
@@ -58,6 +60,9 @@ func _physics_process(delta):
 			jump_remember_time_left = 0
 			ground_remember_time_left = 0
 			velocity.y = -JUMP_SPEED
+		elif(double_jump==false && Input.is_action_just_pressed("ui_up")):
+			velocity.y=-1.5*JUMP_SPEED
+			double_jump=true;	
 		if(Input.is_action_just_released("ui_up")):
 			if(velocity.y < 0): 
 				velocity.y /= 2 
