@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/videos/MainMenu.webm" type="VideoStream" id=1]
 [ext_resource path="res://ui_scenes/title_screen.gd" type="Script" id=2]
+[ext_resource path="res://Music/sci_fi_platformer02.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Music/click4.wav" type="AudioStream" id=4]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
@@ -24,4 +26,13 @@ text = "PLAY"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="bg" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 1.0
+autoplay = true
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 24.0
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]

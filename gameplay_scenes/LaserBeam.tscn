@@ -1,9 +1,11 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://gameplay_scenes/LaserBeam.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/glowing_circle.png" type="Texture" id=2]
 [ext_resource path="res://assets/images/metal.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/bulb.png" type="Texture" id=4]
+[ext_resource path="res://Music/death.wav" type="AudioStream" id=5]
+[ext_resource path="res://Music/space laser.wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 21, 20 )
@@ -149,3 +151,9 @@ texture = ExtResource( 2 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 11 )
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Laser" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
