@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cyberpunk-street.wav-f6b25d4007995816a7bdd56f761994ac.sample"
+
+[deps]
+
+source_file="res://cyberpunk-street.wav"
+dest_files=[ "res://.import/cyberpunk-street.wav-f6b25d4007995816a7bdd56f761994ac.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

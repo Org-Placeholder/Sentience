@@ -25,6 +25,7 @@ func _on_Area2D_body_entered(body):
 		$Sprite.visible = false
 		$EffekseerEmitter2D.play()
 		if(body.has_method("on_hit")):
+			$Hit.play()
 			body.on_hit(hitpoints)
 		elif(body.get_parent().has_method("on_hit")):
 			body.get_parent().on_hit(hitpoints)

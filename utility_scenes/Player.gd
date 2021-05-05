@@ -105,6 +105,7 @@ func on_hit(val):
 	pass
 	
 func on_wasted(message):
+	$Death.play()
 	GameState.game_playing = false
 	GameState.alive = false
 	var f_screen = failure_screen.instance()

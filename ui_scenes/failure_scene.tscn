@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://ui_scenes/failure_scene.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/GameOverScreen.jpg" type="Texture" id=2]
+[ext_resource path="res://Music/click4.wav" type="AudioStream" id=3]
 
 [node name="failure" type="Node2D"]
 z_index = 10
@@ -33,4 +34,8 @@ text = "RETRY"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 24.0
 [connection signal="pressed" from="Retry" to="." method="_on_Retry_pressed"]

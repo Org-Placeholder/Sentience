@@ -74,8 +74,10 @@ func checkCollision()->void:
 func on_hit(val):
 	if(!destroyed):
 		health -= val
+		$Damaged.play()
 		$hitpoint_launcher.launch(val)
 		if(health < 0) :
+			$Destroyed.play()
 			destroyed = true
 			$Base.visible = false
 			$Base2.visible = false

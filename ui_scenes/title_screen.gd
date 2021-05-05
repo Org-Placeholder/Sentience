@@ -20,6 +20,7 @@ func _process(delta):
 
 
 func _on_Play_pressed():
+	$Click.play()
 	var level_num = DataManager.get_last_completed_level() + 1
 	get_tree().change_scene("res://gameplay_scenes/levels/level" + str(level_num) + ".tscn")
 	pass # Replace with function body.

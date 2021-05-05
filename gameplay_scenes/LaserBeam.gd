@@ -94,6 +94,8 @@ func cast_beam() -> void:
 
 
 func appear() -> void:
+	$Laser.play()
+	$Laser.max_distance=500
 	if tween.is_active():
 		tween.stop_all()
 	tween.interpolate_property(fill, "width", 0, line_width, growth_time * 2)
@@ -101,6 +103,7 @@ func appear() -> void:
 
 
 func disappear() -> void:
+	$Laser.stop()
 	if tween.is_active():
 		tween.stop_all()
 	tween.interpolate_property(fill, "width", fill.width, 0, growth_time)
