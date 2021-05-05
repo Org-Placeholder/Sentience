@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/videos/title.webm" type="VideoStream" id=1]
+[ext_resource path="res://assets/videos/MainMenu.webm" type="VideoStream" id=1]
 [ext_resource path="res://ui_scenes/title_screen.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
@@ -16,10 +16,10 @@ __meta__ = {
 }
 
 [node name="Play" type="Button" parent="."]
-margin_left = 184.197
-margin_top = 209.301
-margin_right = 424.197
-margin_bottom = 260.301
+margin_left = 396.197
+margin_top = 333.301
+margin_right = 636.197
+margin_bottom = 384.301
 text = "PLAY"
 __meta__ = {
 "_edit_use_anchors_": false
