@@ -12,6 +12,8 @@ Credits :
 - Laser beam code and assets from [here](https://github.com/GDQuest/godot-2d-space-game) and assets for the same licensed under [CC 4.0](https://creativecommons.org/licenses/by/4.0/) by GDQuest and contributors (https://www.gdquest.com/)
 - Turret inspired by a similar 2d asset by [f0x0ne](https://f0x0ne.itch.io/2d-sci-fi-turret-pack). 
 
+### Audio credits
+
 Title:
     51 UI sound effects (buttons, switches and clicks)
 
