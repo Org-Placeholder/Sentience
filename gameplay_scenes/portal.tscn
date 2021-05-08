@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://effects/portal.efkefc" type="Resource" id=1]
+[ext_resource path="res://gameplay_scenes/portal.gd" type="Script" id=2]
+[ext_resource path="res://Music/death.wav" type="AudioStream" id=3]
+[ext_resource path="res://Music/saw.wav" type="AudioStream" id=4]
+[ext_resource path="res://addons/effekseer/src/EffekseerEmitter2D.gdns" type="Script" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 841.928
+
+[node name="portal" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Blade" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = 24.0
+max_distance = 1981.0
+
+[node name="EffekseerEmitter2D" type="Node2D" parent="."]
+script = ExtResource( 5 )
+effect = ExtResource( 1 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

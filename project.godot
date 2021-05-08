@@ -9,22 +9,22 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "",
+"base": "Resource",
 "class": "EffekseerEffect",
 "language": "NativeScript",
 "path": "res://assets/addons/effekseer/src/EffekseerEffect.gdns"
 }, {
-"base": "",
+"base": "Spatial",
 "class": "EffekseerEmitter",
 "language": "NativeScript",
 "path": "res://assets/addons/effekseer/src/EffekseerEmitter.gdns"
 }, {
-"base": "",
+"base": "Node2D",
 "class": "EffekseerEmitter2D",
 "language": "NativeScript",
 "path": "res://assets/addons/effekseer/src/EffekseerEmitter2D.gdns"
 }, {
-"base": "",
+"base": "Resource",
 "class": "EffekseerResource",
 "language": "NativeScript",
 "path": "res://assets/addons/effekseer/src/EffekseerResource.gdns"

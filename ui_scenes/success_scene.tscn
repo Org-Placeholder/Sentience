@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://ui_scenes/success_scene.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/GameOverScreen.jpg" type="Texture" id=2]
+[ext_resource path="res://Music/click4.wav" type="AudioStream" id=3]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/fonts/Montserrat-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = SubResource( 1 )
+
+[node name="sucess" type="Node2D"]
+position = Vector2( 533.515, 258.055 )
+z_index = 10
+script = ExtResource( 1 )
+
+[node name="GameOverScreen" type="Sprite" parent="."]
+position = Vector2( 49.9245, 69.7738 )
+scale = Vector2( 0.371572, 0.381097 )
+texture = ExtResource( 2 )
+
+[node name="Next" type="Button" parent="."]
+margin_left = 133.977
+margin_top = 87.5956
+margin_right = 356.977
+margin_bottom = 132.596
+text = "NEXT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 24.0
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 5.3454, -24.0543 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( -39.2526, -133.15, -39.2526, -40.3919, 500.647, -42.7703, 495.891, -135.529 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -32.0
+margin_top = -151.272
+margin_right = 463.0
+margin_bottom = -67.2725
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Level Complete"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Next" to="." method="_on_Next_pressed"]
