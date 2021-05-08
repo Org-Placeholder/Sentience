@@ -22,5 +22,6 @@ func _on_Retry_pressed():
 	if(true):
 		GameState.game_playing = true
 		GameState.alive = true
-		get_tree().change_scene("res://gameplay_scenes/levels/level1.tscn")
+		print(GameState.level_num)
+		get_tree().change_scene("res://gameplay_scenes/levels/level" + str(GameState.level_num) + ".tscn")
 	pass # Replace with function body.
