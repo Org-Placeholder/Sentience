@@ -8,7 +8,7 @@ var d_system = preload("res://utility_scenes/DialogSystem/Dialog.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var dialogue=["Hello ! Welcome to the game.","Added second dialogue to check dialogue transition.","Hope you enjoy the game!!"]
+	var dialogue=["Hello ! beep bop beep bop.","Use arrow keys to move, and jump.","Sayonara!!!"]
 	var ds_instance = d_system.instance()
 	$Camera2D.add_child(ds_instance)
 	ds_instance.translate(Vector2(-510, -300))
