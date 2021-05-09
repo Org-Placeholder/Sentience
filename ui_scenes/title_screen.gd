@@ -33,3 +33,7 @@ func _on_Play_pressed():
 		print(level_num)
 		get_tree().change_scene("res://gameplay_scenes/levels/level" + str(level_num) + ".tscn")
 	pass # Replace with function body.
+
+
+func _on_LevelSelect_pressed():
+	get_tree().change_scene("res://ui_scenes/LevelSelect.tscn")
