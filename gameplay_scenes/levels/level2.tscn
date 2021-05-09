@@ -1,17 +1,18 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://utility_scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/images/bgs/gray.png" type="Texture" id=2]
 [ext_resource path="res://gameplay_scenes/Camera2D.gd" type="Script" id=3]
 [ext_resource path="res://gameplay_scenes/portal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/scifitilemap.tres" type="TileSet" id=5]
+[ext_resource path="res://gameplay_scenes/blade.tscn" type="PackedScene" id=6]
+[ext_resource path="res://gameplay_scenes/levels/level2.gd" type="Script" id=7]
 [ext_resource path="res://assets/images/damage.png" type="Texture" id=9]
-[ext_resource path="res://gameplay_scenes/levels/level.gd" type="Script" id=10]
 [ext_resource path="res://Music/hurt.wav" type="AudioStream" id=12]
 [ext_resource path="res://Music/cyberpunk-street.wav" type="AudioStream" id=13]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 10 )
+script = ExtResource( 7 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -113,3 +114,64 @@ stream = ExtResource( 12 )
 [node name="portal" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2453.03, -2530.83 )
 scale = Vector2( 0.25, 0.25 )
+
+[node name="blade" parent="." instance=ExtResource( 6 )]
+position = Vector2( 224.492, 240.207 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="blade13" parent="." instance=ExtResource( 6 )]
+position = Vector2( -2709.03, -1772.62 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="blade14" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1862.69, -343.957 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="blade15" parent="." instance=ExtResource( 6 )]
+position = Vector2( -880.339, 437.044 )
+scale = Vector2( 0.15, 0.15 )
+script = null
+
+[node name="blade2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 761.029, -143.675 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="blade3" parent="." instance=ExtResource( 6 )]
+position = Vector2( -220.003, -882.255 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="blade4" parent="." instance=ExtResource( 6 )]
+position = Vector2( -501.892, -1868.51 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="blade5" parent="." instance=ExtResource( 6 )]
+position = Vector2( -1063.55, -1865.29 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="blade7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1174.09, -2244.92 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="blade8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2435.74, -2934.12 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="blade9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2761.26, -2815.13 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="blade10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2835.34, -2469.42 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="blade11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2631.05, -2130.43 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="blade12" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2292.07, -2157.37 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="blade6" parent="." instance=ExtResource( 6 )]
+position = Vector2( -1614.71, -1860.07 )
+scale = Vector2( 0.15, 0.15 )
