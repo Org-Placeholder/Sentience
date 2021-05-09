@@ -40,3 +40,5 @@ func update_level(level_num, time):
 	if(game_data["level"] < level_num):
 		game_data["level"] = level_num
 	save_game()
+
+

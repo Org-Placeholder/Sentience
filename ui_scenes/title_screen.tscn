@@ -17,11 +17,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="LevelSelect" type="Button" parent="."]
+margin_left = 394.0
+margin_top = 378.0
+margin_right = 636.0
+margin_bottom = 433.0
+text = "Level Select"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Play" type="Button" parent="."]
-margin_left = 396.197
-margin_top = 333.301
-margin_right = 636.197
-margin_bottom = 384.301
+margin_left = 393.952
+margin_top = 304.117
+margin_right = 633.952
+margin_bottom = 355.117
+rect_pivot_offset = Vector2( 120, 80.1565 )
 text = "PLAY"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -35,4 +46,5 @@ autoplay = true
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 volume_db = 24.0
+[connection signal="pressed" from="LevelSelect" to="." method="_on_LevelSelect_pressed"]
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
