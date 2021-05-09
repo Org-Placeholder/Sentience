@@ -21,6 +21,7 @@ var failure_screen = preload("res://ui_scenes/failure_scene.tscn")
 var jump_remember_time_left = -1
 var ground_remember_time_left = -1 
 var double_jump=false;
+var health = 25
 func _physics_process(delta):
 	if(GameState.game_playing):
 		var p_state = IDLE
@@ -106,7 +107,11 @@ func _physics_process(delta):
 
 func on_hit(val):
 	$AnimatedSprite/hitpoint_launcher.launch(val)
+	health-=val
+	if(health < 0):
+		on_wasted("Shot down")
 	GameState.hit()
+	
 	pass
 	
 func on_wasted(message):

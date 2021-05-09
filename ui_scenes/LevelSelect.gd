@@ -14,6 +14,7 @@ func _ready():
 		
 	var levels = $LevelSelect.get_children()
 	var level_num = DataManager.get_last_completed_level()
+	level_num = min(GameState.max_level,level_num+1)
 	for i in range(level_num):
 		levels[i].disabled = false
 
