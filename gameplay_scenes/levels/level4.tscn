@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://utility_scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/images/bgs/gray.png" type="Texture" id=2]
 [ext_resource path="res://gameplay_scenes/Camera2D.gd" type="Script" id=3]
 [ext_resource path="res://gameplay_scenes/portal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/scifitilemap.tres" type="TileSet" id=5]
+[ext_resource path="res://gameplay_scenes/Turret.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/images/damage.png" type="Texture" id=9]
 [ext_resource path="res://gameplay_scenes/levels/level.gd" type="Script" id=10]
 [ext_resource path="res://Music/hurt.wav" type="AudioStream" id=12]
@@ -94,7 +95,7 @@ scale = Vector2( 0.13, 0.14 )
 texture = ExtResource( 9 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -400, 213.546 )
+position = Vector2( -718.779, 240.485 )
 
 [node name="TileMap2" type="TileMap" parent="."]
 scale = Vector2( 0.75, 0.75 )
@@ -113,3 +114,34 @@ stream = ExtResource( 12 )
 [node name="portal" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2453.03, -2530.83 )
 scale = Vector2( 0.25, 0.25 )
+
+[node name="Turret" parent="." instance=ExtResource( 6 )]
+position = Vector2( 501.032, -94.0841 )
+scale = Vector2( 0.6, 0.6 )
+up_rot_angle = 0
+down_rot_angle = 0
+timeBetweenShots = 1.0
+bullet_strength = 20
+
+[node name="Turret2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1510.64, -477.008 )
+scale = Vector2( 0.6, 0.6 )
+up_rot_angle = 0
+down_rot_angle = 0
+timeBetweenShots = 0.2
+bullet_strength = 3
+
+[node name="Turret3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 117.113, -865.44 )
+scale = Vector2( 0.6, 0.6 )
+up_rot_angle = 0
+down_rot_angle = 0
+timeBetweenShots = 0.01
+bullet_strength = 30
+
+[node name="Turret4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 93.7515, -2203.68 )
+scale = Vector2( 0.6, 0.6 )
+up_rot_angle = 20
+down_rot_angle = -20
+timeBetweenShots = 0.2

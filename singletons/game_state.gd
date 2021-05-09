@@ -4,7 +4,7 @@ extends Node
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var max_level = 1
+var max_level = 5
 var game_playing = true
 var alive = true
 var damage_modulate = 0
