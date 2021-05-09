@@ -6,13 +6,13 @@
 [ext_resource path="res://gameplay_scenes/portal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/scifitilemap.tres" type="TileSet" id=5]
 [ext_resource path="res://gameplay_scenes/Turret.tscn" type="PackedScene" id=6]
+[ext_resource path="res://gameplay_scenes/levels/level4.gd" type="Script" id=7]
 [ext_resource path="res://assets/images/damage.png" type="Texture" id=9]
-[ext_resource path="res://gameplay_scenes/levels/level.gd" type="Script" id=10]
 [ext_resource path="res://Music/hurt.wav" type="AudioStream" id=12]
 [ext_resource path="res://Music/cyberpunk-street.wav" type="AudioStream" id=13]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 10 )
+script = ExtResource( 7 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
