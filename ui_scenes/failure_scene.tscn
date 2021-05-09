@@ -5,6 +5,7 @@
 [ext_resource path="res://Music/click4.wav" type="AudioStream" id=3]
 
 [node name="failure" type="Node2D"]
+position = Vector2( 530.457, 339.795 )
 z_index = 10
 script = ExtResource( 1 )
 

@@ -111,10 +111,6 @@ func on_hit(val):
 	
 func on_wasted(message):
 	$Death.play()
-	GameState.game_playing = false
-	GameState.alive = false
-	var f_screen = failure_screen.instance()
-	get_parent().get_parent().get_node("Camera2D").add_child(f_screen)
-	f_screen.get_node("Label").text = message
+	get_tree().change_scene("res://ui_scenes/failure_scene.tscn")
 	#handle death and show message
 	pass
