@@ -18,10 +18,13 @@ Download the binary for your respective platform for [here](https://github.com/A
 Well, building it yourself is another option. For that, you'll require any Godot 3.X binary (3.2.3 preferred).
 
 # :camera: Snapshots :camera:
+<p align =  "center">
+  <img src="https://raw.githubusercontent.com/Attendo-App/Platformer-Assets/main/Player_fire.png" width="65%"/>
+</p>
 
-![image](https://raw.githubusercontent.com/Attendo-App/Platformer-Assets/main/Player_fire.png)
-
-![image](https://raw.githubusercontent.com/Attendo-App/Platformer-Assets/main/in_game_screenshot.png)
+<p align =  "center">
+  <img src="https://raw.githubusercontent.com/Attendo-App/Platformer-Assets/main/in_game_screenshot.png" width="65%"/>
+</p>
 
 # :clipboard: Credits :clipboard:
 
