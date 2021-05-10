@@ -1,6 +1,6 @@
 # :bulb: Sentience | The Sci-Fi-Platformer :electric_plug:
 
-Sentience is a sci-fi platformer made in godot engine. It uses the effekseer plugin for VFX. 
+Sentience is a sci-fi platformer made in godot engine. It uses the effekseer plugin for VFX. Download the binary for your respective platform from [here](https://github.com/Attendo-App/Sci-Fi-Platformer/releases/tag/1.0).
 
 # :pencil: How to play :pencil:
 
@@ -14,7 +14,7 @@ Sentience is a sci-fi platformer made in godot engine. It uses the effekseer plu
 
 # :video_game: Playing the game :video_game:
 
-Download the binary for your respective platform for [here](https://github.com/Attendo-App/Sci-Fi-Platformer/releases/tag/1.0). If you don't see your target platform there,
+Download the binary for your respective platform from [here](https://github.com/Attendo-App/Sci-Fi-Platformer/releases/tag/1.0). If you don't see your target platform there,
 Well, building it yourself is another option. For that, you'll require any Godot 3.X binary (3.2.3 preferred).
 
 # :camera: Snapshots :camera:
