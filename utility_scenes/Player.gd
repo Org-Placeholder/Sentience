@@ -18,7 +18,7 @@ var direction = RIGHT
 var onground = false
 var velocity = Vector2()
 var failure_screen = preload("res://ui_scenes/failure_scene.tscn")
-var dust_anim = preload("res://effects/dust_particle.tscn")
+var dust_anim = preload("res://effects/Dust.tscn")
 var jump_remember_time_left = -1
 var ground_remember_time_left = -1 
 var double_jump=false;
@@ -114,6 +114,9 @@ func _physics_process(delta):
 
 func trigger_dust():
 	var dust_inst=dust_anim.instance()
+	add_child(dust_inst)
+	dust_inst=dust_anim.instance()
+	dust_inst.scale.x=-1;
 	add_child(dust_inst)
 func on_hit(val):
 	$AnimatedSprite/hitpoint_launcher.launch(val)

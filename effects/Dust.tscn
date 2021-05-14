@@ -12,10 +12,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.7 ),
+"times": PoolRealArray( 0, 0.1, 0.5 ),
 "transitions": PoolRealArray( 0.5, 2, 2 ),
 "update": 0,
-"values": [ Vector2( 0.1, 0.1 ), Vector2( 0.3, 0.3 ), Vector2( 1e-05, 1e-05 ) ]
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 0.2, 0.2 ), Vector2( 1e-05, 1e-05 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:position")
@@ -24,17 +24,17 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.7 ),
+"times": PoolRealArray( 0, 0.1, 0.5 ),
 "transitions": PoolRealArray( 0.5, 0.5, 2 ),
 "update": 0,
-"values": [ Vector2( 0, 120 ), Vector2( 150, 75 ), Vector2( 200, 25 ) ]
+"values": [ Vector2( 0, 120 ), Vector2( 150, 80 ), Vector2( 150, 50 ) ]
 }
 
 [node name="Dust" type="Position2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 200, 25 )
+position = Vector2( 150, 50 )
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 1 )
 
