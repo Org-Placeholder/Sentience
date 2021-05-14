@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/images/dust_particle.png" type="Texture" id=1]
+[ext_resource path="res://effects/Dust.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "dust_rise"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.7 ),
+"transitions": PoolRealArray( 0.5, 2, 2 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 0.3, 0.3 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.7 ),
+"transitions": PoolRealArray( 0.5, 0.5, 2 ),
+"update": 0,
+"values": [ Vector2( 0, 120 ), Vector2( 150, 75 ), Vector2( 200, 25 ) ]
+}
+
+[node name="Dust" type="Position2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 200, 25 )
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/dust_rise = SubResource( 1 )

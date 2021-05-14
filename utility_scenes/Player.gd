@@ -18,12 +18,17 @@ var direction = RIGHT
 var onground = false
 var velocity = Vector2()
 var failure_screen = preload("res://ui_scenes/failure_scene.tscn")
+var dust_anim = preload("res://effects/Dust.tscn")
 var jump_remember_time_left = -1
 var ground_remember_time_left = -1 
 var double_jump=false;
 var health = 25
+var coming_down=false;
 func _physics_process(delta):
 	if(GameState.game_playing):
+		if(velocity.y==0 && coming_down):
+		   trigger_dust()
+		   coming_down=false
 		var p_state = IDLE
 		var p_gun = false
 		var p_dir = direction
@@ -104,7 +109,12 @@ func _physics_process(delta):
 		if(p_dir != direction):
 			$AnimatedSprite.scale.x = p_dir*abs($AnimatedSprite.scale.x)
 			direction = p_dir
+		if(velocity.y>0):
+			coming_down=true;
 
+func trigger_dust():
+	var dust_inst=dust_anim.instance()
+	add_child(dust_inst)
 func on_hit(val):
 	$AnimatedSprite/hitpoint_launcher.launch(val)
 	health-=val
@@ -113,7 +123,6 @@ func on_hit(val):
 	GameState.hit()
 	
 	pass
-	
 func on_wasted(message):
 	$Death.play()
 	get_tree().change_scene("res://ui_scenes/failure_scene.tscn")
