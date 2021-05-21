@@ -15,7 +15,7 @@ Sentience is a sci-fi platformer made in godot engine. It uses the effekseer plu
 # :video_game: Playing the game :video_game:
 
 Download the binary for your respective platform from [here](https://github.com/Attendo-App/Sci-Fi-Platformer/releases/tag/1.0). If you don't see your target platform there,
-Well, building it yourself is another option. For that, you'll require any Godot 3.X binary (3.2.3 preferred).
+Well, building it yourself is another option. For that, you'll require any Godot 3.X binary (3.2.3 preferred). Open the project in Godot and click play. Exporting procedure can be seen [here](https://docs.godotengine.org/en/stable/getting_started/workflow/export/exporting_projects.html).
 
 # :camera: Snapshots :camera:
 <p align =  "center">
